@@ -1,35 +1,23 @@
-#include "./include/List.hpp"
+#include "./include/Queue.hpp"
 #include <iostream>
 
 using namespace std;
 
 int main() {
-    List myList;
+    Queue myQueue{};
 
-    myList.append(7);
-    myList.append(69);
-    myList.prepend(24);
-    myList.append(49);
+    myQueue.enqueue(1);
+    myQueue.enqueue(2);
+    myQueue.enqueue(3);
+    myQueue.enqueue(4);
 
-    myList.print();
+    myQueue.print();
 
-    myList.pop();
-    myList.snap();
-
-    cout << endl;
-
-    myList.append(4);
-    myList.append(22);
-    myList.prepend(1);
-
-    myList.insert(40, 2);
-
-    myList.print();
-
-    myList.erase(2);
+    myQueue.dequeue();
 
     cout << endl;
-    myList.print();
+
+    myQueue.print();
 
     return 0;
 }
